@@ -22,4 +22,11 @@ keywords:
 - samples
 - training
 
+home: https://github.com/nntran/rancher-charts
+sources:
+- https://github.com/nntran/pic-viewer-docker-flask
 
+maintainers:
+- name: Nhi TRAN
+  email: ntran@ntdt.fr
+icon: https://raw.githubusercontent.com/cncf/artwork/master/projects/longhorn/horizontal/color/longhorn-horizontal-color.svg?sanitize=true
