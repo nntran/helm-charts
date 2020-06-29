@@ -1,0 +1,18 @@
+categories:
+  - Samples
+  - Training
+questions:
+  - variable: persistence.enabled
+default: "false"
+description: "Enable persistent volume for Picture Viewer"
+type: boolean
+required: true
+label: Pic Viewer Persistent Volume Persistent Volume Enabled
+show_subquestion_if: true
+group: "Picture Viewer Settings"
+subquestions:
+  - variable: persistence.size
+    default: "10Gi"
+    type: string
+    label: Volume size
+    description: "Picture Viewer Volume Size"
