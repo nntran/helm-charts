@@ -50,17 +50,17 @@ spec:
             timeoutSeconds: 2
             successThreshold: 2
             failureThreshold: 2
-    #       resources:
-    #         {{- toYaml .Values.resources | nindent 12 }}
-    #   {{- with .Values.nodeSelector }}
-    #   nodeSelector:
-    #     {{- toYaml . | nindent 8 }}
-    #   {{- end }}
-    # {{- with .Values.affinity }}
-    #   affinity:
-    #     {{- toYaml . | nindent 8 }}
-    # {{- end }}
-    # {{- with .Values.tolerations }}
-    #   tolerations:
-    #     {{- toYaml . | nindent 8 }}
-    # {{- end }}
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+    {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
+    {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
