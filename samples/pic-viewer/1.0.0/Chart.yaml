@@ -32,4 +32,4 @@ maintainers:
 - name: Nhi TRAN
   email: ntran@ntdt.fr
 
-icon: https://github.com/nntran/rancher-charts/blob/master/samples/pic-viewer/icon.svg
+icon: https://github.com/nntran/rancher-charts/blob/dev/samples/pic-viewer/1.0.0/icon.svg
