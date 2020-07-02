@@ -21,19 +21,19 @@ kubectl create namespace proxy
 ## Dry run
 
 ```sh
-helm install trefik  ./ingress/traefik/1.0.0 -n proxy --debug --dry-run
+helm install traefik  ./ingress/traefik/1.0.0 -n proxy --debug --dry-run
 ```
 
 ## Install
 
 ```sh
-helm install trefik ./ingress/traefik/1.0.0 -n proxy
+helm install traefik ./ingress/traefik/1.0.0 -n proxy
 ```
 
 ## Test
 
 ```sh
-helm test trefik -n proxy
+helm test traefik -n proxy
 ```
 
 Output example :
@@ -45,7 +45,7 @@ Output example :
 ## Uninstall
 
 ```sh
-helm uninstall trefik -n proxy --debug
+helm uninstall traefik -n proxy --debug
 ```
 
 Output example:
