@@ -7,20 +7,27 @@ metadata:
 spec:
   type: {{ .Values.service.type }}
   ports:
-    - port: {{ .Values.service.http.port }}
+    - name: http
+      port: {{ .Values.service.http.port }}
       nodePort: {{ .Values.service.http.nodePort }}
       targetPort: {{ .Values.service.http.targetPort }}
       protocol: TCP
-      name: http
-    - port: {{ .Values.service.https.port }}
+    - name: https
+      port: {{ .Values.service.https.port }}
       nodePort: {{ .Values.service.https.nodePort }}
       targetPort: {{ .Values.service.https.targetPort }}
       protocol: TCP
-      name: https
-    - port: {{ .Values.service.admin.port }}
+    - name: admin
+      protocol: TCP
+      port: {{ .Values.service.admin.port }}
       nodePort: {{ .Values.service.admin.nodePort }}
       targetPort: {{ .Values.service.admin.targetPort }}
-      protocol: TCP
-      name: admin
+    - name: streaming
+      protocol: UDP
+      port: {{ .Values.service.streaming.port }}
+      nodePort: {{ .Values.service.streaming.nodePort }}
+      targetPort: {{ .Values.service.streaming.targetPort }}
+      
+      
   selector:
     {{- include "traefik.selectorLabels" . | nindent 4 }}

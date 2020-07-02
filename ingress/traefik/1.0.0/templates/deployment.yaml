@@ -31,9 +31,10 @@ spec:
             - --log.level={{ .Values.log.level }}
             - --api
             - --api.insecure
+            - --providers.kubernetesingress
             - --entrypoints.http.address=:80
             - --entrypoints.https.address=:443
-            - --providers.kubernetesingress
+            - --entrypoints.streaming.address=:1704
           ports:
             - name: http
               containerPort: 80
@@ -44,6 +45,9 @@ spec:
             - name: admin
               containerPort: 8080
               protocol: TCP
+            - name: streaming
+              containerPort: 1704
+              protocol: UDP
           # livenessProbe:
           #   httpGet:
           #     path: /
