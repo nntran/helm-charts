@@ -19,13 +19,13 @@ kubectl create namespace samples
 ## Dry run
 
 ```sh
-helm install  pic-viewer ./charts/samples/pic-viewer/1.0.0 -n samples --debug --dry-run
+helm install  pic-viewer ./samples/pic-viewer/1.0.0 -n samples --debug --dry-run
 ```
 
 ## Install
 
 ```sh
-helm install pic-viewer ./charts/samples/pic-viewer/1.0.0 -n samples
+helm install pic-viewer ./samples/pic-viewer/1.0.0 -n samples
 ```
 
 ## Test

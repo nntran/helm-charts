@@ -1,0 +1,13 @@
+# binaries
+bin/
+
+# vagrant
+.vagrant/
+
+# IDE
+.idea
+.vscode
+.DS_Store
+
+# Logs
+*.log
